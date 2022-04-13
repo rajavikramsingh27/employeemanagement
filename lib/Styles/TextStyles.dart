@@ -18,11 +18,16 @@ class TextStyles {
         fontWeight: FontWeight.normal,
       );
 
-  static TextStyle get textStyles_32_bold => TextStyle(
+  static TextStyle get textStyles_32_normal => TextStyle(
         fontSize: SizeStyle.textSize_32,
         fontFamily: kFontFamily,
-        fontWeight: FontWeight.bold,
+        fontWeight: FontWeight.normal,
       );
+  static TextStyle get textStyles_32_bold => TextStyle(
+    fontSize: SizeStyle.textSize_32,
+    fontFamily: kFontFamily,
+    fontWeight: FontWeight.bold,
+  );
 
   static TextStyle get textStyles_14_normal => TextStyle(
         fontSize: SizeStyle.textSize_14,
@@ -36,15 +41,27 @@ class TextStyles {
         fontWeight: FontWeight.bold,
       );
 
-  static TextStyle get textStyles_16_w600 => TextStyle(
+  static TextStyle get textStyles_16_bold => TextStyle(
         fontSize: SizeStyle.textSize_16,
         fontFamily: kFontFamily,
         fontWeight: FontWeight.bold,
       );
+  static TextStyle get textStyles_16_w600 => TextStyle(
+    fontSize: SizeStyle.textSize_14,
+    fontFamily: kFontFamily,
+    // fontWeight: FontWeight.w600,
+  );
 
   static TextStyle get textStyles_12_normal => TextStyle(
         fontSize: SizeStyle.textSize_12,
         fontFamily: kFontFamily,
         fontWeight: FontWeight.normal,
       );
+
+  static TextStyle get textStyles_30 => TextStyle(
+    fontSize: SizeStyle.textSize_30,
+    fontFamily: kFontFamily,
+    fontWeight: FontWeight.w400,
+  );
+
 }

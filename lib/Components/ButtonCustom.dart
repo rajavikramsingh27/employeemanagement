@@ -45,3 +45,42 @@ class ElevatedButtonCustom extends StatelessWidget {
   }
 }
 
+class ElevatedButtonWithoutSizeCustom extends StatelessWidget {
+  final Function()? onTap;
+  final String? text;
+  final Color? colorBG;
+  final Color? colorText;
+
+  const ElevatedButtonWithoutSizeCustom({
+    Key? key,
+    this.onTap,
+    this.text = "Elevated Button",
+    this.colorBG = Colors.red,
+    this.colorText = Colors.white,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return ElevatedButton(
+      style: ElevatedButton.styleFrom(
+        primary: colorBG,
+        elevation: 0,
+        padding: EdgeInsets.only(
+          left: 20,
+          right: 20,
+        ),
+
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(SizeStyle.textSize_14),
+        ),
+      ),
+      child: Text(
+        text!,
+        style: TextStyles.textStyles_14_normal.apply(
+          color: colorText,
+        ),
+      ),
+      onPressed: onTap,
+    );
+  }
+}

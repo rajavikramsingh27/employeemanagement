@@ -12,12 +12,12 @@ class ButtonDemo extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: ColorStyle.blueColor,
-      appBar: AppBarStyle(),
+      appBar: AppBarStyleAuth(),
       body :Container(
         padding: EdgeInsets.only(
           left: 16, right: 16, top: 16
         ),
-        child: ElevatedButtonCustom(
+        child: ElevatedButtonWithoutSizeCustom(
           text: "Let's get started",
           colorBG: ColorStyle.blueColor,
           colorText: ColorStyle.primaryWhite,
