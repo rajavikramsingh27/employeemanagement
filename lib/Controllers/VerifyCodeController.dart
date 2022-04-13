@@ -6,11 +6,15 @@ class VerifyCodeController extends GetxController {
   Rx<TextEditingController> txtOTP_Second = TextEditingController().obs;
   Rx<TextEditingController> txtOTP_Third = TextEditingController().obs;
   Rx<TextEditingController> txtOTP_Fourth = TextEditingController().obs;
+  Rx<TextEditingController> txtOTP_Five = TextEditingController().obs;
+  Rx<TextEditingController> txtOTP_Six = TextEditingController().obs;
 
   FocusNode focusFirst = FocusNode();
   FocusNode focusSecond = FocusNode();
   FocusNode focusThird = FocusNode();
   FocusNode focusFourth = FocusNode();
+  FocusNode focusFive = FocusNode();
+  FocusNode focusSix = FocusNode();
 
   RxDouble height = 0.0.obs;
 

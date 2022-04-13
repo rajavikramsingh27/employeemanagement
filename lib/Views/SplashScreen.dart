@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:employeemanagement/Styles/TextStyles.dart';
 import 'package:employeemanagement/Views/Bording.dart';
 import 'package:employeemanagement/Views/ButtonDemo.dart';
 import 'package:flutter/material.dart';
@@ -31,21 +32,14 @@ class SplashScreen extends StatelessWidget {
               children: [
                 Text(
                   'employee',
-                  style: TextStyle(
-                      fontSize: 37,
-
-                      fontFamily: 'Axiforma',
-                      fontWeight: FontWeight.bold,
+                    style: TextStyles.textStyles_32_bold.apply(
                       color: ColorStyle.blueColor
-                  ),
+                    )
                 ),
                 Text(
-                  'management ',
-                  style: TextStyle(
-                      fontSize: 16,
-                      fontFamily: 'Axiforma',
-                      // fontWeight: FontWeight.l,
-                      color: ColorStyle.blueColor
+                  'MANAGEMENT ',
+                  style: TextStyles.textStyles_16_normal.apply(
+                    color: ColorStyle.secondryBlack
                   ),
                 ),
               ],
