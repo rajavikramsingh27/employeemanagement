@@ -3,18 +3,13 @@ import 'package:get/get.dart';
 
 
 class HomeScreenController extends GetxController {
-  Rx<TextEditingController> txtControllerApply = TextEditingController().obs;
+  RxBool agree = false.obs;
+  RxInt yesandno = 0.obs;
 
-  RxList<bool> listApply = [
-    false,
-    false,
+  reset() {
+    yesandno.value = 0;
+    agree.value;
 
-  ].obs;
-
-  RxList<String> applyListSelect = [
-   " Apply leave",
-    " View attendance",
-
-  ].obs;
+  }
 
 }

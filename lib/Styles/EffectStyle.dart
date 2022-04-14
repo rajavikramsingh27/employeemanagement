@@ -5,6 +5,14 @@ class EffectStyle {
     return BorderRadius.circular(radius);
   }
 
+  asdfsadf() {
+
+    Container(
+      decoration: curveAuth(Colors.red),
+    );
+
+  }
+
   static curveAuth(Color color) {
     return BoxDecoration(
       color: color,
