@@ -1,3 +1,6 @@
+import 'package:employeemanagement/Controllers/ApplyLeaveController.dart';
+import 'package:employeemanagement/Views/ApplyLeave.dart';
+import 'package:employeemanagement/Views/Leave.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:flutter/services.dart';
@@ -21,6 +24,6 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-        debugShowCheckedModeBanner: false, home: SplashScreen());
+        debugShowCheckedModeBanner: false, home: ApplyLeave());
   }
 }
