@@ -4,6 +4,7 @@ class EffectStyle {
   static radiusCustom(double radius) {
     return BorderRadius.circular(radius);
   }
+
   static curveAuth(Color color) {
     return BoxDecoration(
       color: color,
@@ -20,6 +21,7 @@ class EffectStyle {
       // ],
     );
   }
+  
   static padding(double left, double right, double top, double bottom) {
     return EdgeInsets.only(left: left, right: right, top: top, bottom: bottom);
   }

@@ -2,6 +2,7 @@ import 'package:employeemanagement/Components/AppBarHomeScreen.dart';
 import 'package:employeemanagement/Controllers/HomeScreenController.dart';
 import 'package:employeemanagement/Styles/ColorStyle.dart';
 import 'package:employeemanagement/Styles/ImageStyle.dart';
+import 'package:employeemanagement/Styles/SizeStyle.dart';
 import 'package:employeemanagement/Styles/TextStyles.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -272,13 +273,29 @@ class HomeScreen extends StatelessWidget {
                 ],
               ),
               SizedBox(height: 35,),
-              ElevatedButtonCustom(
-                text: "Apply leave",
-                colorBG: ColorStyle.grayColor,
-                colorText: ColorStyle.primaryWhite,
-                onTap: () {
-                  // Get.to(UploadeProfilePicture());
-                },
+              Row(
+                children: [
+                  Expanded(
+                    child: ElevatedButtonCustomBorder(
+                      text: "Apply leave",
+                      colorBorder: ColorStyle.secondryBlack,
+                      radius: SizeStyle.textSize_18,
+                      onTap: () {
+                        // Get.to(UploadeProfilePicture());
+                      },
+                    ),
+                  ),
+                  SizedBox(width: 20),
+                  Expanded(
+                    child: ElevatedButtonCustom(
+                      text: "Apply leave",
+
+                      onTap: () {
+                        // Get.to(UploadeProfilePicture());
+                      },
+                    ),
+                  ),
+                ],
               ),
 
             ],

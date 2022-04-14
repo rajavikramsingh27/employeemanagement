@@ -30,7 +30,6 @@ class TextEmployee extends StatelessWidget {
             Text(
               'MANAGEMENT',
               style: TextStyles.textStyles_14_normal,
-
             ),
             SizedBox(height: 22,),
             Text(
