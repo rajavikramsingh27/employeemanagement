@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 class ColorStyle{
   static final Color primaryWhite = Colors.white;
   static final Color secondryBlack =  Colors.black;
+  static final Color black54 =  Colors.black54;
   static final Color blueColor= hex("#0282C5");
   static final Color blueLight =  hex("#40DDFE");
   static final Color blueDark =  hex("#0136F9 ");

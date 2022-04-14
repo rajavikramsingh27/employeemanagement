@@ -3,6 +3,7 @@ import 'package:employeemanagement/Styles/ColorStyle.dart';
 import 'package:employeemanagement/Styles/SizeStyle.dart';
 import 'package:employeemanagement/Styles/TextStyles.dart';
 import 'package:employeemanagement/Views/ForgetPassword.dart';
+import 'package:employeemanagement/Views/HomeScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -82,7 +83,7 @@ class Login extends StatelessWidget {
                       colorBG: ColorStyle.grayColor,
                       colorText: ColorStyle.primaryWhite,
                       onTap: () {
-                        // Get.to(ForgetPassword());
+                        Get.to(HomeScreen());
                       },
                     ),
                     SizedBox(
