@@ -103,6 +103,7 @@ class ChangePassword extends StatelessWidget {
                                     ? ColorStyle.blueColor
                                     : ColorStyle.grayColor,
                                 colorText: ColorStyle.primaryWhite,
+                                width: MediaQuery.of(context).size.width,
                                 onTap: () {
                                   controller.listPasswordHintsSelect[0] =
                                   !controller.listPasswordHintsSelect[0];

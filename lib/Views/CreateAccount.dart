@@ -11,15 +11,16 @@ import 'package:employeemanagement/Components/TextEmployee.dart';
 import '../Components/AppBarStyle.dart';
 import '../Controllers/CreateAccountController.dart';
 import '../Styles/SizeStyle.dart';
-
+import '../Views/Login.dart';
 
 
 class CreateAccount extends StatelessWidget {
-  const CreateAccount({Key? key}) : super(key: key);
+   CreateAccount({Key? key}) : super(key: key);
+  final controller = Get.put(CreateAccountController());
 
   @override
   Widget build(BuildContext context) {
-    final controller = Get.put(CreateAccountController());
+    // final controller = Get.put(CreateAccountController());
 
     return Scaffold(
       appBar: AppBarStyleAuth(
@@ -75,12 +76,16 @@ class CreateAccount extends StatelessWidget {
                             SizedBox(height: 47,),
                             Container(
                               alignment: Alignment.center ,
-                              child: Text(
-                                'Already have an account ? Log in',
-                                style: TextStyles.textStyles_14_normal.apply(
-                                    color: ColorStyle.secondryBlack
+                              child: InkWell(
+                                child: Text(
+                                  'Already have an account ? Log in',
+                                  style: TextStyles.textStyles_14_normal.apply(
+                                      color: ColorStyle.secondryBlack
+                                  ),
                                 ),
-
+                                onTap: () {
+                                  Get.to(Login());
+                                },
                               ),
                             ),
                             SizedBox(height: 180,),
@@ -92,6 +97,7 @@ class CreateAccount extends StatelessWidget {
                               text: "Next",
                               colorBG: (controller.txtControllerEmail.value.text.isEmpty) ? ColorStyle.grayColor : ColorStyle.blueColor,
                               colorText: ColorStyle.primaryWhite,
+                              width: MediaQuery.of(context).size.width,
                               onTap: () {
                                 Get.to(CompleteYourProfile());
                               },

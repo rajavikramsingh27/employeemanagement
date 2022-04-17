@@ -2,6 +2,10 @@ import 'package:employeemanagement/Styles/ColorStyle.dart';
 import 'package:employeemanagement/Styles/ImageStyle.dart';
 import 'package:employeemanagement/Styles/TextStyles.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import '../Views/Notifications.dart';
+import '../Views/Profile.dart';
+
 
 class AppBarStyleHome extends StatelessWidget implements PreferredSizeWidget {
   final Function()? onTap;
@@ -60,7 +64,9 @@ class AppBarStyleHome extends StatelessWidget implements PreferredSizeWidget {
                 height: 36,
                 width: 36,
               ),
-              onPressed: () {},
+              onPressed: () {
+                Get.to(Notifications());
+              },
             ),
             IconButton(
               icon: Image.asset(
@@ -68,7 +74,9 @@ class AppBarStyleHome extends StatelessWidget implements PreferredSizeWidget {
                 height: 36,
                 width: 36,
               ),
-              onPressed: () {},
+              onPressed: () {
+                Get.to(Profile());
+              },
             ),
             SizedBox(
               width: 10,

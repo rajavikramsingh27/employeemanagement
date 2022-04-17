@@ -13,11 +13,11 @@ import '../Components/TextFieldCustom.dart';
 
 
 class VerifyCode extends StatelessWidget {
-  const VerifyCode({Key? key}) : super(key: key);
+  VerifyCode({Key? key}) : super(key: key);
+  final controller = Get.put(VerifyCodeController());
 
   @override
   Widget build(BuildContext context) {
-    final controller = Get.put(VerifyCodeController());
 
     return Scaffold(
       appBar: AppBarStyleAuth(
@@ -189,6 +189,7 @@ class VerifyCode extends StatelessWidget {
                     text: "Verify",
                     colorBG: ColorStyle.grayColor,
                     colorText: ColorStyle.primaryWhite,
+                    width: MediaQuery.of(context).size.width,
                     onTap: () {
                       Get.to(CreateNewPassword());
                     },
