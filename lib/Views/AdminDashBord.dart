@@ -10,11 +10,15 @@ import '../Components/AppBarHomeScreen.dart';
 import '../Components/TextFieldCustom.dart';
 
 class AdminDashBord extends StatelessWidget {
-  const AdminDashBord({Key? key}) : super(key: key);
-
+   AdminDashBord({Key? key}) : super(key: key);
+  final controller = Get.put(AdminDashBordController());
+  final padding = EdgeInsets.only(
+    left: 20,
+    right: 20,
+  );
   @override
   Widget build(BuildContext context) {
-    final controller = Get.put(AdminDashBordController());
+
 
     return Scaffold(
       appBar: AppBarStyleHome(),
@@ -28,21 +32,23 @@ class AdminDashBord extends StatelessWidget {
   builder: (authController) {
     return Obx(
           () => SingleChildScrollView(
-        padding: EdgeInsets.only(left: 20, right: 20,top: 20),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            SizedBox(height: 28),
             Container(
               // color: Colors.lightBlue,
               height: 55,
               // width:500,
-              child: ListView.builder(
+              child: ListView.separated(
+                  padding: padding,
                   shrinkWrap: true,
                   itemCount: controller.listAdminDashboard.length,
                   scrollDirection: Axis.horizontal,
-                  physics: BouncingScrollPhysics(),
+                  separatorBuilder: (context, index) {
+                    return SizedBox(width: 10);
+                  },
                   itemBuilder: (BuildContext context, int index) {
-                    String bg_SecondColor;
                     return Row(
                       children: [
                         SizedBox(width: 12,),
@@ -54,7 +60,7 @@ class AdminDashBord extends StatelessWidget {
                                 // 'Assigned task',
                                 controller.listAdminDashboard[index],
 
-                                style: TextStyles.textStyles_20_bold.apply(
+                                style: TextStyles.textStyles_16_normal.apply(
                                   color: (controller.intAppBar.value == index)
                                       ? ColorStyle.blueColor
                                       : ColorStyle.primaryWhite,
@@ -86,11 +92,14 @@ class AdminDashBord extends StatelessWidget {
 
                       ],
                     );
-
                   }),
+
+
             ),
 
             Container(
+               margin: EdgeInsets.only(  left: 20,
+                 right: 20,),
               child: Row(
                 children: [
                   SizedBox(width: 10,),
@@ -127,7 +136,7 @@ class AdminDashBord extends StatelessWidget {
               height: MediaQuery.of(context).size.height,
               // width:500,
               child: ListView.builder(
-                padding: EdgeInsets.only(top: 20),
+                  padding: padding,
                   shrinkWrap: true,
                   // itemCount: controller.listApplyLeave.length,
                   // scrollDirection: Axis.horizontal,
@@ -139,7 +148,7 @@ class AdminDashBord extends StatelessWidget {
                       alignment: Alignment.center,
                       // color: Colors.red,
                       height: 92,
-                      width: 343,
+                      // width: 343,
 
                       margin: EdgeInsets.all(6),
                       // color: Colors.red,

@@ -84,151 +84,116 @@ class MyAllTask extends StatelessWidget {
                                    physics: BouncingScrollPhysics(),
                                    itemBuilder: (BuildContext context, int index) {
                                      String bg_SecondColor;
-                                     return  Row(
-                                       children: [
+                                     return  Container(
 
-                                         Column(
-                                           children: [
-                                             Icon(Icons.circle,size: 18,  color: ColorStyle.secondryBlack,),
-                                             SizedBox(height: 2,),
-                                             Image.asset(
-                                               ImageStyle.Rectangle,
-                                               height: 126,
-                                               width: 4,
-                                               color: ColorStyle.secondryBlack,
-                                             ),
-                                           ],
-                                         ),
-                                         SizedBox(width: 14,),
-                                         Container(
+                                       padding: EdgeInsets.only(left: 10,right: 10),
 
-                                           padding: EdgeInsets.only(left: 10,right: 10),
-
-                                           child: Column(
-                                             crossAxisAlignment: CrossAxisAlignment.start,
+                                       child: Column(
+                                         crossAxisAlignment: CrossAxisAlignment.start,
+                                         children: [
+                                           SizedBox(height: 12,),
+                                           Row(
+                                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                              children: [
-                                               SizedBox(height: 12,),
-                                               Row(
-                                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                                 children: [
-                                                   Text(
-                                                     'Teem meeting',
-                                                     style: TextStyles.textStyles_14_normal.apply(
-                                                         color: ColorStyle.secondryBlack
-                                                     ),
-                                                   ),
-
-                                                   Text(
-                                                     '09:20 am',
-                                                     style: TextStyles.textStyles_14_normal.apply(
-                                                         color: ColorStyle.secondryBlack
-                                                     ),
-                                                   ),
-                                                 ],
-                                               ),
-                                               SizedBox(height: 14,),
                                                Text(
-                                                 'Discusses with new project abc company with',
-                                                 style: TextStyles.textStyles_12_normal.apply(
+                                                 'Teem meeting',
+                                                 style: TextStyles.textStyles_14_normal.apply(
                                                      color: ColorStyle.secondryBlack
                                                  ),
                                                ),
-                                               SizedBox(height: 20,),
-                                               Row(
-                                                 children: [
-                                                   InkWell(
-                                                     child: Container(
-                                                       padding: EdgeInsets.only(left: 18,right: 18),
-                                                       child: Row(
-                                                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                                         children: [
-                                                           Text(
-                                                             'View',
-                                                             style: TextStyles.textStyles_12_normal.apply(
-                                                                 color: ColorStyle.primaryWhite
-                                                             ),
-                                                           ),
 
-                                                           Image.asset(
-                                                               ImageStyle.rightarrowblue,
-                                                               height: 14,
-                                                               width: 14,
-                                                               color: ColorStyle.primaryWhite
-                                                           ),
-                                                         ],
-                                                       ),
-                                                       width: 100,
-                                                       height: 40,
-                                                       decoration: BoxDecoration(
-                                                           borderRadius: BorderRadius.circular(14),
-                                                           color: ColorStyle.secondryBlack
-                                                       ),
-                                                     ),
-                                                     onTap: (){
-                                                       Get.to(MyAllTask());
-                                                     },
-                                                   ),
-                                                   SizedBox(width: 10,),
-                                                   InkWell(
-                                                     child: Container(
-
-                                                       padding: EdgeInsets.only(left: 18,right: 18),
-
-                                                       child: Text(
-                                                         // 'Completed',
-                                                         controller.listMyTask[index],
+                                               Text(
+                                                 '09:20 am',
+                                                 style: TextStyles.textStyles_14_normal.apply(
+                                                     color: ColorStyle.secondryBlack
+                                                 ),
+                                               ),
+                                             ],
+                                           ),
+                                           SizedBox(height: 14,),
+                                           Text(
+                                             'Discusses with new project abc company with',
+                                             style: TextStyles.textStyles_12_normal.apply(
+                                                 color: ColorStyle.secondryBlack
+                                             ),
+                                           ),
+                                           SizedBox(height: 20,),
+                                           Row(
+                                             children: [
+                                               InkWell(
+                                                 child: Container(
+                                                   padding: EdgeInsets.only(left: 18,right: 18),
+                                                   child: Row(
+                                                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                                     children: [
+                                                       Text(
+                                                         'View',
                                                          style: TextStyles.textStyles_12_normal.apply(
                                                              color: ColorStyle.primaryWhite
                                                          ),
                                                        ),
-                                                       alignment: Alignment.center,
-                                                       width: 110,
-                                                       height: 40,
-                                                       decoration: BoxDecoration(
-                                                           borderRadius: BorderRadius.circular(14),
-                                                           color: ColorStyle.blueLight
+
+                                                       Image.asset(
+                                                           ImageStyle.rightarrowblue,
+                                                           height: 14,
+                                                           width: 14,
+                                                           color: ColorStyle.primaryWhite
                                                        ),
-                                                     ),
-                                                     onTap: (){
-                                                       // Get.to(HomeMyTask2());
-                                                     },
+                                                     ],
                                                    ),
-                                                 ],
-                                               )
+                                                   width: 100,
+                                                   height: 40,
+                                                   decoration: BoxDecoration(
+                                                       borderRadius: BorderRadius.circular(14),
+                                                       color: ColorStyle.secondryBlack
+                                                   ),
+                                                 ),
+                                                 onTap: (){
+                                                   Get.to(MyAllTask());
+                                                 },
+                                               ),
+                                               SizedBox(width: 10,),
+                                               InkWell(
+                                                 child: Container(
 
+                                                   padding: EdgeInsets.only(left: 18,right: 18),
+
+                                                   child: Text(
+                                                     // 'Completed',
+                                                     controller.listMyTask[index],
+                                                     style: TextStyles.textStyles_12_normal.apply(
+                                                         color: ColorStyle.primaryWhite
+                                                     ),
+                                                   ),
+                                                   alignment: Alignment.center,
+                                                   width: 110,
+                                                   height: 40,
+                                                   decoration: BoxDecoration(
+                                                       borderRadius: BorderRadius.circular(14),
+                                                       color: ColorStyle.blueLight
+                                                   ),
+                                                 ),
+                                                 onTap: (){
+                                                   // Get.to(HomeMyTask2());
+                                                 },
+                                               ),
                                              ],
-                                           ),
-                                           margin: EdgeInsets.only(bottom: 8),
-                                           height: 150,
-                                           width: 300,
-                                           decoration: BoxDecoration(
-                                               color: Colors.lightBlueAccent.withOpacity(0.1),
-                                               borderRadius: BorderRadius.circular(20)
-                                           ),
-                                         ),
+                                           )
 
-                                       ],
-                                     );
+                                         ],
+                                       ),
+                                       margin: EdgeInsets.only(bottom: 8),
+                                       height: 150,
+                                       // width: 300,
+                                       decoration: BoxDecoration(
+                                           color: Colors.lightBlueAccent.withOpacity(0.1),
+                                           borderRadius: BorderRadius.circular(20)
+                                       ),
+                                     ) ;
 
                                    }),
                              ),
-                         Row(
-                           children: [
-
-
-                             Column(
-                               children: [
-                                 Icon(Icons.circle,size: 18,  color: ColorStyle.secondryBlack,),
-                                 SizedBox(height: 2,),
-                                 Image.asset(
-                                   ImageStyle.Rectangle,
-                                   height: 126,
-                                   width: 4,
-                                   color: ColorStyle.secondryBlack,
-                                 ),
-                               ],
-                             ),
-                             SizedBox(width: 14,),
+                             SizedBox(height: 12,),
                              InkWell(
                                child: Container(
 
@@ -253,7 +218,7 @@ class MyAllTask extends StatelessWidget {
                                  ),
                                  margin: EdgeInsets.only(bottom: 8),
                                  height: 55,
-                                 width: 300,
+                                 // width: 300,
                                  decoration: BoxDecoration(
                                      color: ColorStyle.secondryBlack,
                                      borderRadius: BorderRadius.circular(20)
@@ -263,9 +228,6 @@ class MyAllTask extends StatelessWidget {
                                  Get.to(ChangePassword());
                                },
                              )
-
-                           ],
-                         )
                            ],
                          ),
                        )

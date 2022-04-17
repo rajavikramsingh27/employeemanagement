@@ -8,6 +8,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../Components/ButtonCustom.dart';
+import '../Components/Password.dart';
 import '../Controllers/ChangePasswordController.dart';
 
 class ChangePassword extends StatelessWidget {
@@ -73,86 +74,7 @@ class ChangePassword extends StatelessWidget {
                             },
                           ),
                           Container(height: 30,),
-                          TextFieldPasswordLoginCustom(
-                            // title: 'Password ',
-                            controller: controller.txtControllerConfirmPassword.value,
-                            hintText: 'Confirm password ',
-                            labelText: 'Confirm password ',
-                            onChanged: (text) {
-                              if (controller.txtControllerConfirmPassword.value.text.length >= 8) {
-                                controller.listPasswordHintsSelect[0] = true;
-                              } else if (controller.txtControllerConfirmPassword.value.text.length < 8) {
-                                controller.listPasswordHintsSelect[0] = false;
-                              }
-
-
-                            },
-                          ),
-                          SizedBox(
-                            height: 26,
-                          ),
-                          Text(
-                            'Password must be ',
-                            style: TextStyles.textStyles_16_w600,
-                          ),
-                          Wrap(
-                            children: [
-                              ElevatedButtonCustom(
-                                text: controller.listPasswordHints[0],
-                                colorBG: controller.listPasswordHintsSelect[0]
-                                    ? ColorStyle.blueColor
-                                    : ColorStyle.grayColor,
-                                colorText: ColorStyle.primaryWhite,
-                                width: MediaQuery.of(context).size.width,
-                                onTap: () {
-                                  controller.listPasswordHintsSelect[0] =
-                                  !controller.listPasswordHintsSelect[0];
-                                },
-                              ),
-                              SizedBox(
-                                width: 8,
-                              ),
-                              ElevatedButtonCustom(
-                                text: controller.listPasswordHints[1],
-                                colorBG: controller.listPasswordHintsSelect[1]
-                                    ? ColorStyle.blueColor
-                                    : ColorStyle.grayColor,
-                                colorText: ColorStyle.primaryWhite,
-                                onTap: () {
-                                  controller.listPasswordHintsSelect[1] =
-                                  !controller.listPasswordHintsSelect[1];
-                                },
-                              ),
-                              SizedBox(
-                                width: 8,
-                              ),
-                              ElevatedButtonCustom(
-                                text: controller.listPasswordHints[2],
-                                colorBG: controller.listPasswordHintsSelect[2]
-                                    ? ColorStyle.blueColor
-                                    : ColorStyle.grayColor,
-                                colorText: ColorStyle.primaryWhite,
-                                onTap: () {
-                                  controller.listPasswordHintsSelect[2] =
-                                  !controller.listPasswordHintsSelect[2];
-                                },
-                              ),
-                              SizedBox(
-                                width: 8,
-                              ),
-                              ElevatedButtonCustom(
-                                text: controller.listPasswordHints[3],
-                                colorBG: controller.listPasswordHintsSelect[3]
-                                    ? ColorStyle.blueColor
-                                    : ColorStyle.grayColor,
-                                colorText: ColorStyle.primaryWhite,
-                                onTap: () {
-                                  controller.listPasswordHintsSelect[3] =
-                                  !controller.listPasswordHintsSelect[3];
-                                },
-                              ),
-                            ],
-                          ),
+                          Password(),
                           SizedBox(
                             height: 100,
                           ),
@@ -162,15 +84,32 @@ class ChangePassword extends StatelessWidget {
                         children: [
                           ElevatedButtonCustom(
                             text: "Change password",
-                            colorBG: ColorStyle.blueColor,
+                            colorBG: ColorStyle.grayColor,
                             colorText: ColorStyle.primaryWhite,
+                            width: MediaQuery.of(context).size.width,
                             onTap: () {
                               Get.to(AdminDashBord());
                             },
                           ),
-                          SizedBox(height: 40,),
+                          SizedBox(
+                            height: 40,
+                          ),
+
                         ],
                       ),
+                      // Column(
+                      //   children: [
+                      //     ElevatedButtonCustom(
+                      //       text: "Change password",
+                      //       colorBG: ColorStyle.blueColor,
+                      //       colorText: ColorStyle.primaryWhite,
+                      //       onTap: () {
+                      //         Get.to(AdminDashBord());
+                      //       },
+                      //     ),
+                      //     SizedBox(height: 40,),
+                      //   ],
+                      // ),
                     ],
                   ),
                 )

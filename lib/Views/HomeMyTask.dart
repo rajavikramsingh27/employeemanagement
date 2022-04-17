@@ -42,13 +42,14 @@ class HomeMyTask extends StatelessWidget {
                   Container(
                     padding: padding,
                     child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         InkWell(
                           child: Column(
                             children: [
                               Text(
                                 'My attendance',
-                                style: TextStyles.textStyles_20_bold.apply(
+                                style: TextStyles.textStyles_16_normal.apply(
                                   color: (controller.yes.value == 0)
                                       ? ColorStyle.blueColor
                                       : ColorStyle.secondryBlack,
@@ -81,7 +82,7 @@ class HomeMyTask extends StatelessWidget {
                             children: [
                               Text(
                                 'Today my task',
-                                style: TextStyles.textStyles_14_normal.apply(
+                                style: TextStyles.textStyles_16_normal.apply(
                                   color: (controller.yes.value == 1)
                                       ? ColorStyle.blueColor
                                       : ColorStyle.secondryBlack,

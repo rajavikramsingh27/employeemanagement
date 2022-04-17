@@ -171,123 +171,128 @@ class AttendanceReports extends StatelessWidget {
                 ),
                 SizedBox(height: 50),
                 Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    InkWell(
-                      child:   Container(
-                        height: 150,
-                        width: 107,
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Image.asset(ImageStyle.historyblue,
-                              height: 50 , width: 50,),
-                            SizedBox(height: 16,),
-                            Text(
-                              '00:00',
-                              style: TextStyles.textStyles_14_normal.apply(
-                                  color: ColorStyle.secondryBlack
+                    Expanded(
+                      child: InkWell(
+                        child: Container(
+                          height: 150,
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Image.asset(
+                                ImageStyle.historyblue,
+                                height: 50,
+                                width: 50,
                               ),
-
-                            ),
-                            SizedBox(height: 4,),
-                            Text(
-                              'Clock In',
-                              style: TextStyles.textStyles_14_normal.apply(
-                                  color: ColorStyle.secondryBlack
+                              SizedBox(
+                                height: 16,
                               ),
-
-                            ),
-                          ],
+                              Text(
+                                '00:00',
+                                style: TextStyles.textStyles_14_normal
+                                    .apply(color: ColorStyle.secondryBlack),
+                              ),
+                              SizedBox(
+                                height: 4,
+                              ),
+                              Text(
+                                'Clock In',
+                                style: TextStyles.textStyles_14_normal
+                                    .apply(color: ColorStyle.secondryBlack),
+                              ),
+                            ],
+                          ),
+                          decoration: BoxDecoration(
+                              color: Colors.lightBlue.withOpacity(0.1),
+                              borderRadius: BorderRadius.circular(26)),
                         ),
-                        decoration: BoxDecoration(
-                            color: Colors.lightBlue.withOpacity(0.1),
-                            borderRadius: BorderRadius.circular(26)
-
-                        ),
+                        onTap: () {},
                       ),
-                      onTap: (){
-
-                      },
                     ),
-                    SizedBox(width: 8,),
-                    InkWell(
-                      child:   Container(
-                        height: 150,
-                        width: 107,
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Image.asset(ImageStyle.history,
-                              height: 50 , width: 50,),
-                            SizedBox(height: 16,),
-                            Text(
-                              '00:00',
-                              style: TextStyles.textStyles_14_normal.apply(
-                                  color: ColorStyle.secondryBlack
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Expanded(
+                      child: InkWell(
+                        child: Container(
+                          height: 150,
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Image.asset(
+                                ImageStyle.history,
+                                height: 50,
+                                width: 50,
                               ),
-
-                            ),
-                            SizedBox(height: 4,),
-                            Text(
-                              'Clock Out',
-                              style: TextStyles.textStyles_14_normal.apply(
-                                  color: ColorStyle.secondryBlack
+                              SizedBox(
+                                height: 16,
                               ),
-
-                            ),
-                          ],
+                              Text(
+                                '00:00',
+                                style: TextStyles.textStyles_14_normal
+                                    .apply(color: ColorStyle.secondryBlack),
+                              ),
+                              SizedBox(
+                                height: 4,
+                              ),
+                              Text(
+                                'Clock Out',
+                                style: TextStyles.textStyles_14_normal
+                                    .apply(color: ColorStyle.secondryBlack),
+                              ),
+                            ],
+                          ),
+                          decoration: BoxDecoration(
+                              color: Colors.orangeAccent.withOpacity(0.3),
+                              borderRadius: BorderRadius.circular(26)),
                         ),
-                        decoration: BoxDecoration(
-                            color: Colors.orangeAccent.withOpacity(0.3),
-                            borderRadius: BorderRadius.circular(26)
-
-                        ),
+                        onTap: () {},
                       ),
-                      onTap: (){
-
-                      },
                     ),
-                    SizedBox(width: 8,),
-                    InkWell(
-                      child:  Container(
-                        height: 150,
-                        width: 107,
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Image.asset(ImageStyle.historyblack,
-                              height: 50 , width: 50,),
-                            SizedBox(height: 16,),
-                            Text(
-                              '00:00',
-                              style: TextStyles.textStyles_14_normal.apply(
-                                  color: ColorStyle.secondryBlack
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Expanded(
+                      child: InkWell(
+                        child: Container(
+                          height: 150,
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Image.asset(
+                                ImageStyle.historyblack,
+                                height: 50,
+                                width: 50,
                               ),
-
-                            ),
-                            SizedBox(height: 1,),
-                            Text(
-                              "Working Hr's",
-                              style: TextStyles.textStyles_14_normal.apply(
-                                  color: ColorStyle.secondryBlack
+                              SizedBox(
+                                height: 16,
                               ),
-
-                            ),
-                          ],
+                              Text(
+                                '00:00',
+                                style: TextStyles.textStyles_14_normal
+                                    .apply(color: ColorStyle.secondryBlack),
+                              ),
+                              SizedBox(
+                                height: 1,
+                              ),
+                              Text(
+                                "Working Hr's",
+                                style: TextStyles.textStyles_14_normal
+                                    .apply(color: ColorStyle.secondryBlack),
+                              ),
+                            ],
+                          ),
+                          decoration: BoxDecoration(
+                              color: ColorStyle.grayColor,
+                              borderRadius: BorderRadius.circular(26)),
                         ),
-                        decoration: BoxDecoration(
-                            color: ColorStyle.grayColor,
-                            borderRadius: BorderRadius.circular(26)
-
-                        ),
+                        onTap: () {},
                       ),
-                      onTap: (){
-
-                      },
                     ),
-
                   ],
                 ),
+
                 SizedBox(height: 30,),
                 Container(
                   height: 120,

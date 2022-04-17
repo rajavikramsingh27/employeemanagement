@@ -1,3 +1,4 @@
+import 'package:employeemanagement/Views/AllLeaves.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -35,13 +36,14 @@ class HomeScreen extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         InkWell(
                           child: Column(
                             children: [
                               Text(
                                 'My attendance',
-                                style: TextStyles.textStyles_20_bold.apply(
+                                style: TextStyles.textStyles_16_normal.apply(
                                     color: (controller.yesandno.value == 0)
                                         ? ColorStyle.blueColor
                                         : ColorStyle.secondryBlack),
@@ -101,6 +103,7 @@ class HomeScreen extends StatelessWidget {
                         ),
                       ],
                     ),
+
                     SizedBox(
                       height: 19,
                     ),
@@ -202,10 +205,13 @@ class HomeScreen extends StatelessWidget {
                         SizedBox(
                           width: 5,
                         ),
-                        Text(
-                          '   abc software abc building, abc street...',
-                          style: TextStyles.textStyles_14_normal
-                              .apply(color: ColorStyle.secondryBlack),
+                        Expanded(
+                          child: Text(
+                            '   abc software abc building, abc street...',
+                            textAlign: TextAlign.left,
+                            style: TextStyles.textStyles_14_normal
+                                .apply(color: ColorStyle.secondryBlack),
+                          ),
                         ),
                       ],
                     ),

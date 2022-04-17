@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class ApplyLeaveController extends GetxController {
-  RxBool agree = false.obs;
-  RxInt yesandno = 0.obs;
+  RxInt selectUnselect = 0.obs;
+  RxInt selectUnselec = 0.obs;
 
   reset() {
-    yesandno.value = 0;
-    agree.value;
+    // selectUnselect.value = 0;
+    // selectUnselec.value = 0;
   }
 
   RxList<String> listApplyLeave = [
@@ -15,21 +15,14 @@ class ApplyLeaveController extends GetxController {
     'Approved',
     'Declined',
   ].obs;
-
-  RxList<bool> listMonthSelected = [
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-    false
+  RxList<String> listApply = [
+    'All leaves  ',
+    'Causal',
+    'Sick',
+    'Earned Leave',
   ].obs;
+
+
   RxList<String> listMonths = [
     'January 2022 ',
     'February 2022',

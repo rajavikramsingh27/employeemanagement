@@ -3,6 +3,7 @@ import 'package:employeemanagement/Components/ButtonCustom.dart';
 import 'package:employeemanagement/Styles/ColorStyle.dart';
 import 'package:employeemanagement/Styles/ImageStyle.dart';
 import 'package:employeemanagement/Styles/TextStyles.dart';
+import 'package:employeemanagement/Views/HomeScreen.dart';
 import 'package:employeemanagement/Views/Login.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -99,7 +100,7 @@ class PermissionScreen extends StatelessWidget {
                   colorText: ColorStyle.primaryWhite,
                   width: MediaQuery.of(context).size.width,
                   onTap: () {
-                    Get.to(Login());
+                    Get.to(HomeScreen());
                   },
                 ),
                 SizedBox(height: 13),
@@ -109,7 +110,7 @@ class PermissionScreen extends StatelessWidget {
                   colorText: ColorStyle.primaryWhite,
                   width: MediaQuery.of(context).size.width,
                   onTap: () {
-                    Get.to(Login());
+                    // Get.to(Login());
                   },
                 ),
                 SizedBox(height:40),
