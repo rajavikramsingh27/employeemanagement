@@ -204,14 +204,11 @@ class AdminDashBord extends StatelessWidget {
                           )
                         ],
                       ),
-
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(26),
                           color: Colors.lightBlueAccent.withOpacity(0.1)
-
                       ),
                     );
-
                   }),
             ),
 
