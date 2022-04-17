@@ -6,6 +6,7 @@ import 'package:employeemanagement/Styles/SizeStyle.dart';
 import 'package:employeemanagement/Styles/TextStyles.dart';
 import 'package:employeemanagement/Views/ApplyLeave.dart';
 import 'package:employeemanagement/Views/AttendanceReports.dart';
+import 'package:employeemanagement/Views/HomeMyTask.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -96,6 +97,8 @@ class HomeScreen extends StatelessWidget {
                         onTap: (){
                           controller.agree.value = !controller.agree.value;
                           controller.yesandno.value = 1;
+                          Get.to(HomeMyTask());
+
                         },
                       ),
 

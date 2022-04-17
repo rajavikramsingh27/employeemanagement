@@ -28,6 +28,7 @@ environment:
 # versions available, run `flutter pub outdated`.
 dependencies:
   image_picker:
+  date_time_picker: ^2.1.0
   flutter:
     sdk: flutter
 

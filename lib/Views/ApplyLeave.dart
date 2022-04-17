@@ -22,7 +22,7 @@ class ApplyLeave extends StatelessWidget {
       appBar: AppBarStyleAuth(
         title: 'Leave',
       ),
-      backgroundColor: ColorStyle.primaryWhite ,
+      backgroundColor: ColorStyle.primaryWhite,
       body: GetBuilder(
         init: ApplyLeaveController(),
         initState: (state) {
@@ -31,280 +31,262 @@ class ApplyLeave extends StatelessWidget {
           print(controller.yesandno.value);
         },
         builder: (authController) {
-          return Obx(() =>     SingleChildScrollView(
-            padding: EdgeInsets.only(left: 25, right: 20,top: 26),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    InkWell(
-                      child:  Column(
-                        children: [
-                          Text(
-                            'All leaves',
-                            style: TextStyles.textStyles_16_normal.apply(
-                                color: (controller.yesandno.value == 0)
-                                    ? ColorStyle.blueColor
-                                    : ColorStyle.secondryBlack
-                            ),
-
-                          ),
-                          SizedBox(width: 5,),
-                          Container(
-                            width: 8,
-                            height: 8,
-                            decoration: BoxDecoration(
-                                color: (   controller.yesandno.value == 0)
-                                    ? ColorStyle.blueColor
-                                    : ColorStyle.primaryWhite,
-                                borderRadius: BorderRadius.circular(8)
-                            ),
-                          )
-                        ],
-                      ),
-                      onTap: (){
-                        controller.agree.value = !controller.agree.value;
-                        controller.yesandno.value = 0;
-                      },
-                    ),
-
-                    InkWell(
-                      child:    Column(
-                        children: [
-                          Text(
-                            'Causal',
-                            style: TextStyles.textStyles_14_normal.apply(
-                              color: (   controller.yesandno.value == 1)
-                                  ? ColorStyle.blueColor
-                                  : ColorStyle.secondryBlack,
-                            ),
-
-                          ),
-                          SizedBox(width: 5,),
-                          Container(
-                            width: 8,
-                            height: 8,
-                            decoration: BoxDecoration(
-                                color: (   controller.yesandno.value == 1)
-                                    ? ColorStyle.blueColor
-                                    : ColorStyle.primaryWhite,
-                                borderRadius: BorderRadius.circular(8)
-                            ),
-                          )
-                        ],
-                      ),
-                      onTap: (){
-                        controller.agree.value = !controller.agree.value;
-                        controller.yesandno.value = 1;
-                      },
-                    ),
-
-                    InkWell(
-                      child:    Column(
-                        children: [
-                          Text(
-                            'Sick',
-                            style: TextStyles.textStyles_14_normal.apply(
-                              color: (   controller.yesandno.value == 2)
-                                  ? ColorStyle.blueColor
-                                  : ColorStyle.secondryBlack,
-                            ),
-
-                          ),
-                          SizedBox(width: 5,),
-                          Container(
-                            width: 8,
-                            height: 8,
-                            decoration: BoxDecoration(
-                                color: (   controller.yesandno.value == 2)
-                                    ? ColorStyle.blueColor
-                                    : ColorStyle.primaryWhite,
-                                borderRadius: BorderRadius.circular(8)
-                            ),
-                          )
-                        ],
-                      ),
-                      onTap: (){
-                        controller.agree.value = !controller.agree.value;
-                        controller.yesandno.value = 2;
-                      },
-                    ),
-
-                    InkWell(
-                      child:    Column(
-                        children: [
-                          Text(
-                            'Earned Leave',
-                            style: TextStyles.textStyles_14_normal.apply(
-                              color: (   controller.yesandno.value == 3)
-                                  ? ColorStyle.blueColor
-                                  : ColorStyle.secondryBlack,
-                            ),
-
-                          ),
-                          SizedBox(width: 5,),
-                          Container(
-                            width: 8,
-                            height: 8,
-                            decoration: BoxDecoration(
-                                color: (   controller.yesandno.value == 3)
-                                    ? ColorStyle.blueColor
-                                    : ColorStyle.primaryWhite,
-                                borderRadius: BorderRadius.circular(8)
-                            ),
-                          )
-                        ],
-                      ),
-                      onTap: (){
-                        controller.agree.value = !controller.agree.value;
-                        controller.yesandno.value = 3;
-                      },
-                    ),
-
-                  ],
-                ),
-                SizedBox(height: 18,),
-                Row(
-                  children: [
-                    Text(
-                      'April, 2022',
-                      style: TextStyles.textStyles_16_bold.apply(
-                          color: ColorStyle.secondryBlack
-                      ),
-
-                    ),
-                    SizedBox(width: 10,),
-                    InkWell(
-                      child:  Container(
-                          height: 24,
-                          width: 24,
-                          child:  Image.asset(ImageStyle.dropDownbutton,
-                            height: 32 , width: 32,),
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(24),
-                              color: ColorStyle.grayColor
-                          )
-                      ),
-                      onTap: (){
-                        months();
-                      },
-                    )
-
-                  ],
-                ),
-                SizedBox(height: 30,),
-                ListView.builder(
-                    padding: EdgeInsets.only(
-                         bottom: 30),
-                    shrinkWrap: true,
-                    itemCount: controller.listApplyLeave.length,
-                    // scrollDirection: Axis.horizontal,
-                    // physics: BouncingScrollPhysics(),
-                    itemBuilder: (BuildContext context, int index) {
-                      return Container(
-                        padding: EdgeInsets.only(
-                            left: 12, right: 12, top: 16, bottom: 16),
-                        margin: EdgeInsets.only(bottom: 16),
-                        height: 120,
-                        // width: 370,
-                        child: Row(
-                          mainAxisAlignment:
-                          MainAxisAlignment.spaceBetween,
+          return Obx(
+            () => SingleChildScrollView(
+              padding: EdgeInsets.only(left: 25, right: 20, top: 26),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      InkWell(
+                        child: Column(
                           children: [
-                            Column(
-                              crossAxisAlignment:
-                              CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  'Casual Leave ',
-                                  style: TextStyles.textStyles_16_normal.apply(
-                                      color: ColorStyle.secondryBlack
-                                  ),
-                                ),
-                                SizedBox(
-                                  height: 10,
-                                ),
-                                Text(
-                                  'Half Day',
-                                  style: TextStyles.textStyles_14_normal.apply(
-                                      color: ColorStyle.secondryBlack
-                                  ),
-                                ),
-                                Text(
-                                  'Mon 20 april, 2022',
-
-                                  style: TextStyles.textStyles_14_normal.apply(
-                                      color: ColorStyle.secondryBlack
-                                  ),
-                                ),
-
-                              ],
+                            Text(
+                              'All leaves',
+                              style: TextStyles.textStyles_16_normal.apply(
+                                  color: (controller.yesandno.value == 0)
+                                      ? ColorStyle.blueColor
+                                      : ColorStyle.secondryBlack),
+                            ),
+                            SizedBox(
+                              width: 5,
                             ),
                             Container(
-                                alignment: Alignment.center,
-
-                                child: Text(
-                                    controller.listApplyLeave[index],
-                      style: TextStyles.textStyles_14_normal.apply(
-                      color: ColorStyle.secondryBlack
-                      ),),
-                                decoration: BoxDecoration(
-                                    borderRadius:
-                                    BorderRadius.circular(16),
-                                  color: ColorStyle.yellowLight
-
-                                ),
-                              width: 100,
-                              height: 40,
+                              width: 8,
+                              height: 8,
+                              decoration: BoxDecoration(
+                                  color: (controller.yesandno.value == 0)
+                                      ? ColorStyle.blueColor
+                                      : ColorStyle.primaryWhite,
+                                  borderRadius: BorderRadius.circular(8)),
                             )
-
                           ],
                         ),
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(20),
-                            border: Border.all(
-                                width: 1,
-                                color: ColorStyle.grayColor
+                        onTap: () {
+                          controller.agree.value = !controller.agree.value;
+                          controller.yesandno.value = 0;
+                        },
+                      ),
+                      InkWell(
+                        child: Column(
+                          children: [
+                            Text(
+                              'Causal',
+                              style: TextStyles.textStyles_14_normal.apply(
+                                color: (controller.yesandno.value == 1)
+                                    ? ColorStyle.blueColor
+                                    : ColorStyle.secondryBlack,
+                              ),
+                            ),
+                            SizedBox(
+                              width: 5,
+                            ),
+                            Container(
+                              width: 8,
+                              height: 8,
+                              decoration: BoxDecoration(
+                                  color: (controller.yesandno.value == 1)
+                                      ? ColorStyle.blueColor
+                                      : ColorStyle.primaryWhite,
+                                  borderRadius: BorderRadius.circular(8)),
                             )
+                          ],
                         ),
-
-                      );
-                    }),
-                SizedBox(height: 40,),
-               Container(
-                 alignment: Alignment.center,
-
-                 child:  ElevatedButtonCustomBorder(
-                   text: " + Apply leave",
-                   height: 60,
-                   width: 250,
-                   colorBorder: ColorStyle.secondryBlack,
-                   radius: SizeStyle.textSize_18,
-                   onTap: () {
-                     Get.to(ApplyLeave());
-                   },
-                 ),
-               )
-
-              ],
+                        onTap: () {
+                          controller.agree.value = !controller.agree.value;
+                          controller.yesandno.value = 1;
+                        },
+                      ),
+                      InkWell(
+                        child: Column(
+                          children: [
+                            Text(
+                              'Sick',
+                              style: TextStyles.textStyles_14_normal.apply(
+                                color: (controller.yesandno.value == 2)
+                                    ? ColorStyle.blueColor
+                                    : ColorStyle.secondryBlack,
+                              ),
+                            ),
+                            SizedBox(
+                              width: 5,
+                            ),
+                            Container(
+                              width: 8,
+                              height: 8,
+                              decoration: BoxDecoration(
+                                  color: (controller.yesandno.value == 2)
+                                      ? ColorStyle.blueColor
+                                      : ColorStyle.primaryWhite,
+                                  borderRadius: BorderRadius.circular(8)),
+                            )
+                          ],
+                        ),
+                        onTap: () {
+                          controller.agree.value = !controller.agree.value;
+                          controller.yesandno.value = 2;
+                        },
+                      ),
+                      InkWell(
+                        child: Column(
+                          children: [
+                            Text(
+                              'Earned Leave',
+                              style: TextStyles.textStyles_14_normal.apply(
+                                color: (controller.yesandno.value == 3)
+                                    ? ColorStyle.blueColor
+                                    : ColorStyle.secondryBlack,
+                              ),
+                            ),
+                            SizedBox(
+                              width: 5,
+                            ),
+                            Container(
+                              width: 8,
+                              height: 8,
+                              decoration: BoxDecoration(
+                                  color: (controller.yesandno.value == 3)
+                                      ? ColorStyle.blueColor
+                                      : ColorStyle.primaryWhite,
+                                  borderRadius: BorderRadius.circular(8)),
+                            )
+                          ],
+                        ),
+                        onTap: () {
+                          controller.agree.value = !controller.agree.value;
+                          controller.yesandno.value = 3;
+                        },
+                      ),
+                    ],
+                  ),
+                  SizedBox(
+                    height: 18,
+                  ),
+                  Row(
+                    children: [
+                      Text(
+                        'April, 2022',
+                        style: TextStyles.textStyles_16_bold
+                            .apply(color: ColorStyle.secondryBlack),
+                      ),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      InkWell(
+                        child: Container(
+                            height: 24,
+                            width: 24,
+                            child: Image.asset(
+                              ImageStyle.dropDownbutton,
+                              height: 32,
+                              width: 32,
+                            ),
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(24),
+                                color: ColorStyle.grayColor)),
+                        onTap: () {
+                          months();
+                        },
+                      )
+                    ],
+                  ),
+                  SizedBox(
+                    height: 30,
+                  ),
+                  ListView.builder(
+                      padding: EdgeInsets.only(bottom: 30),
+                      shrinkWrap: true,
+                      itemCount: controller.listApplyLeave.length,
+                      // scrollDirection: Axis.horizontal,
+                      // physics: BouncingScrollPhysics(),
+                      itemBuilder: (BuildContext context, int index) {
+                        return Container(
+                          padding: EdgeInsets.only(
+                              left: 12, right: 12, top: 16, bottom: 16),
+                          margin: EdgeInsets.only(bottom: 16),
+                          height: 120,
+                          // width: 370,
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    'Casual Leave ',
+                                    style: TextStyles.textStyles_16_normal
+                                        .apply(color: ColorStyle.secondryBlack),
+                                  ),
+                                  SizedBox(
+                                    height: 10,
+                                  ),
+                                  Text(
+                                    'Half Day',
+                                    style: TextStyles.textStyles_14_normal
+                                        .apply(color: ColorStyle.secondryBlack),
+                                  ),
+                                  Text(
+                                    'Mon 20 april, 2022',
+                                    style: TextStyles.textStyles_14_normal
+                                        .apply(color: ColorStyle.secondryBlack),
+                                  ),
+                                ],
+                              ),
+                              Container(
+                                alignment: Alignment.center,
+                                child: Text(
+                                  controller.listApplyLeave[index],
+                                  style: TextStyles.textStyles_14_normal
+                                      .apply(color: ColorStyle.secondryBlack),
+                                ),
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(16),
+                                    color: ColorStyle.yellowLight),
+                                width: 100,
+                                height: 40,
+                              )
+                            ],
+                          ),
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(20),
+                              border: Border.all(
+                                  width: 1, color: ColorStyle.grayColor)),
+                        );
+                      }),
+                  SizedBox(
+                    height: 40,
+                  ),
+                  Container(
+                    alignment: Alignment.center,
+                    child: ElevatedButtonCustomBorder(
+                      text: " + Apply leave",
+                      height: 60,
+                      width: 250,
+                      colorBorder: ColorStyle.secondryBlack,
+                      radius: SizeStyle.textSize_18,
+                      onTap: () {
+                        Get.to(ApplyLeave());
+                      },
+                    ),
+                  )
+                ],
+              ),
             ),
-
-
-          ),);
+          );
         },
       ),
     );
   }
 }
+
 months() {
   final controller = Get.put(ApplyLeaveController());
 
-  return Get.dialog(
-      Material(
-          color: Colors.transparent,
-          child: Obx(() => Column(
+  return Get.dialog(Material(
+      color: Colors.transparent,
+      child: Obx(() => Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Container(
@@ -339,14 +321,13 @@ months() {
                             margin: EdgeInsets.only(right: 20),
                             width: 31,
                             height: 31,
-                            child:Icon(
+                            child: Icon(
                               Icons.clear,
                               color: ColorStyle.secondryBlack,
-                              size:20.0,
-
+                              size: 20.0,
                             ),
                             decoration: BoxDecoration(
-                              // color: ColorStyle.bgColor,
+                                // color: ColorStyle.bgColor,
                                 borderRadius: BorderRadius.circular(10),
                                 boxShadow: [
                                   new BoxShadow(
@@ -362,7 +343,7 @@ months() {
                       ],
                     ),
                     ListView.builder(
-                        padding: EdgeInsets.only (  top: 20),
+                        padding: EdgeInsets.only(top: 20),
                         shrinkWrap: true,
                         itemCount: controller.listMonths.length,
                         // itemCount: 11,
@@ -370,17 +351,16 @@ months() {
                         itemBuilder: (BuildContext context, int index) {
                           return Row(
                             children: [
-
                               InkWell(
                                 child: Container(
-
                                   child: Icon(
-                                    controller.agree.value ?  Icons.check :  Icons.check,
+                                    controller.agree.value
+                                        ? Icons.check
+                                        : Icons.check,
                                     color: (controller.yesandno.value == index)
                                         ? ColorStyle.primaryWhite
                                         : Colors.white,
-                                    size:20.0,
-
+                                    size: 20.0,
                                   ),
                                   alignment: Alignment.center,
                                   height: 32,
@@ -388,30 +368,24 @@ months() {
                                   margin: EdgeInsets.only(
                                       left: 16, right: 16, bottom: 10),
                                   decoration: BoxDecoration(
-                                      color: (controller.yesandno.value == index)
-                                          ? ColorStyle.blueColor
-                                          : Colors.white,
+                                      color:
+                                          (controller.yesandno.value == index)
+                                              ? ColorStyle.blueColor
+                                              : Colors.white,
                                       borderRadius: BorderRadius.circular(12),
                                       border: Border.all(
                                           width: 1,
-                                          color: ColorStyle.grayColor
-                                      )
-
-                                  ),
+                                          color: ColorStyle.grayColor)),
                                 ),
                                 onTap: () {
                                   controller.yesandno.value = index;
                                 },
                               ),
                               Text(
-
                                 // 'Logo',
                                 controller.listMonths[index],
                                 style: TextStyle(
-                                    color: Colors.black,
-                                    fontSize: 15
-
-                                ),
+                                    color: Colors.black, fontSize: 15),
                               ),
                             ],
                           );
@@ -420,6 +394,5 @@ months() {
                 ),
               ),
             ],
-          ))
-      ));
+          ))));
 }

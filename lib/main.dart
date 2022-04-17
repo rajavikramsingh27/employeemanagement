@@ -1,3 +1,6 @@
+import 'package:employeemanagement/Controllers/ApplyLeaveController.dart';
+import 'package:employeemanagement/Views/ApplyLeave.dart';
+import 'package:employeemanagement/Views/Leave.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:flutter/services.dart';
