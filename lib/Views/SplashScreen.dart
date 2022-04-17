@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:employeemanagement/Styles/TextStyles.dart';
-import 'package:employeemanagement/Views/Bording.dart';
+import 'package:employeemanagement/Views/OnBording.dart';
 import 'package:employeemanagement/Views/ButtonDemo.dart';
 import 'package:flutter/material.dart';
 
@@ -18,7 +18,7 @@ class SplashScreen extends StatelessWidget {
             ()=>Navigator.pushReplacement(context,
             MaterialPageRoute(builder:
                 (context) =>
-                    Bording()
+                    OnBording()
             )
         )
     );

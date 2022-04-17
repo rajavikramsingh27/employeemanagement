@@ -79,10 +79,10 @@ class Login extends StatelessWidget {
                 Column(
                   children: [
                     ElevatedButtonCustom(
-                      
                       text: "Next",
                       colorBG: ColorStyle.grayColor,
                       colorText: ColorStyle.primaryWhite,
+                      width: MediaQuery.of(context).size.width,
                       onTap: () {
                         Get.to(HomeScreen());
                       },

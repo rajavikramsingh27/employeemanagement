@@ -209,6 +209,7 @@ class HomeScreen extends StatelessWidget {
                   ),
                   SizedBox(height: 39,),
                   Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       InkWell(
                         child:   Container(
@@ -247,7 +248,7 @@ class HomeScreen extends StatelessWidget {
 
                         },
                       ),
-                      SizedBox(width: 8,),
+                      // SizedBox(width: 8,),
                       InkWell(
                         child:   Container(
                           height: 150,
@@ -285,7 +286,7 @@ class HomeScreen extends StatelessWidget {
 
                         },
                       ),
-                      SizedBox(width: 8,),
+                      // SizedBox(width: 8,),
                       InkWell(
                         child:  Container(
                           height: 150,
@@ -323,7 +324,6 @@ class HomeScreen extends StatelessWidget {
 
                         },
                       ),
-
                     ],
                   ),
                   SizedBox(height: 35,),

@@ -8,8 +8,8 @@ import '../Views/CreateAccount.dart';
 
 
 
-class Bording extends StatelessWidget {
-  const Bording({Key? key}) : super(key: key);
+class OnBording extends StatelessWidget {
+  const OnBording({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -50,6 +50,7 @@ class Bording extends StatelessWidget {
                 text: "Let's Get Started",
                 colorBG: ColorStyle.blueColor,
                 colorText: ColorStyle.primaryWhite,
+                width: MediaQuery.of(context).size.width,
                 onTap: () {
                   Get.to(CreateAccount());
                 },

@@ -12,11 +12,12 @@ import 'package:image_picker/image_picker.dart';
 import '../Controllers/UploadeProfilePictureController.dart';
 
 class UploadeProfilePicture extends StatelessWidget {
-  const UploadeProfilePicture({Key? key}) : super(key: key);
+  UploadeProfilePicture({Key? key}) : super(key: key);
+  final controller = Get.put(UploadeProfilePictureController());
+
 
   @override
   Widget build(BuildContext context) {
-    final controller = Get.put(UploadeProfilePictureController());
 
     void _showPopupMenu() async {
       await showMenu(
@@ -47,15 +48,19 @@ class UploadeProfilePicture extends StatelessWidget {
               source: ImageSource.camera,
               maxWidth: 500
           ))!;
+
+          controller.postPicture.value = Image.file(File(image.path));
+          controller.filePostPicture  = File(image.path);
         } else if (value == 2) {
           image = (await picker.pickImage(
               source: ImageSource.gallery,
               maxWidth: 500
           ))!;
+
+          controller.postPicture.value = Image.file(File(image.path));
+          controller.filePostPicture  = File(image.path);
         }
 
-        // controller.postPicture.value = Image.file(File(image.path),);
-        // controller.filePostPicture  = File(image.path);
       });
     }
 
@@ -126,6 +131,7 @@ class UploadeProfilePicture extends StatelessWidget {
                         text: "Verify",
                         colorBG: ColorStyle.grayColor,
                         colorText: ColorStyle.primaryWhite,
+                        width: MediaQuery.of(context).size.width,
                         onTap: () {
                           Get.to(PermissionScreen());
                         },

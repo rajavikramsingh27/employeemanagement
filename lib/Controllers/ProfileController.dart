@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-
 class ProfileController extends GetxController {
   Rx<TextEditingController> txtControllerPassword = TextEditingController().obs;
-
 
   RxList<String> listProfileSelect = [
     'My all task ',
@@ -20,8 +18,6 @@ class ProfileController extends GetxController {
     'App version',
   ].obs;
 
-
-
   RxList<String> listProfile = [
     'Your complete task history ',
     'View all your attendance reports',
@@ -35,5 +31,4 @@ class ProfileController extends GetxController {
     'You have logged out of the app',
     '1.0.0',
   ].obs;
-
 }

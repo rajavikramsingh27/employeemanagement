@@ -60,6 +60,7 @@ class ForgetPassword extends StatelessWidget {
                       text: "Next",
                       colorBG: ColorStyle.grayColor,
                       colorText: ColorStyle.primaryWhite,
+                      width: MediaQuery.of(context).size.width,
                       onTap: () {
                         Get.to(VerifyCode());
                       },

@@ -15,7 +15,7 @@ class PermissionScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBarStyleAuth(
-          title:   'We take the following permissions',
+          title:   'Following permissions',
         ),
       backgroundColor: ColorStyle.primaryWhite,
       body: Container(
@@ -94,20 +94,20 @@ class PermissionScreen extends StatelessWidget {
             Column(
               children: [
                 ElevatedButtonCustom(
-
                   text: "Grant permission",
                   colorBG: ColorStyle.blueColor,
                   colorText: ColorStyle.primaryWhite,
+                  width: MediaQuery.of(context).size.width,
                   onTap: () {
                     Get.to(Login());
                   },
                 ),
                 SizedBox(height: 13),
                 ElevatedButtonCustom(
-
                   text: "Deny permission",
                   colorBG: ColorStyle.grayColor,
                   colorText: ColorStyle.primaryWhite,
+                  width: MediaQuery.of(context).size.width,
                   onTap: () {
                     Get.to(Login());
                   },

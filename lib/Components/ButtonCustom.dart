@@ -18,10 +18,9 @@ class ElevatedButtonCustom extends StatelessWidget {
     this.text = "Elevated Button",
     this.colorBG = Colors.red,
     this.colorText = Colors.white,
-    this.width = 200,
-    this.height = 44,
+    this.width = 50,
+    this.height = 50,
   }) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
