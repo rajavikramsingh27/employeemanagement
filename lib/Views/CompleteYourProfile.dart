@@ -1,6 +1,6 @@
 import 'package:employeemanagement/Components/ButtonCustom.dart';
 import 'package:employeemanagement/Components/TextFieldCustom.dart';
-import 'package:employeemanagement/Controllers/ProfileController.dart';
+import 'package:employeemanagement/Controllers/CompleteYourProfileController.dart';
 import 'package:employeemanagement/Styles/ColorStyle.dart';
 import 'package:employeemanagement/Styles/SizeStyle.dart';
 import 'package:employeemanagement/Styles/TextStyles.dart';
