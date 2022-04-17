@@ -69,7 +69,7 @@ class CreateNewPassword extends StatelessWidget {
                               ),
                               Wrap(
                                 children: [
-                                  ElevatedButtonWithoutSizeCustom(
+                                  ElevatedButtonCustom(
                                     text: controller.listPasswordHints[0],
                                     colorBG: controller.listPasswordHintsSelect[0]
                                         ? ColorStyle.blueColor
@@ -83,7 +83,7 @@ class CreateNewPassword extends StatelessWidget {
                                   SizedBox(
                                     width: 8,
                                   ),
-                                  ElevatedButtonWithoutSizeCustom(
+                                  ElevatedButtonCustom(
                                     text: controller.listPasswordHints[1],
                                     colorBG: controller.listPasswordHintsSelect[1]
                                         ? ColorStyle.blueColor
@@ -97,7 +97,7 @@ class CreateNewPassword extends StatelessWidget {
                                   SizedBox(
                                     width: 8,
                                   ),
-                                  ElevatedButtonWithoutSizeCustom(
+                                  ElevatedButtonCustom(
                                     text: controller.listPasswordHints[2],
                                     colorBG: controller.listPasswordHintsSelect[2]
                                         ? ColorStyle.blueColor
@@ -111,7 +111,7 @@ class CreateNewPassword extends StatelessWidget {
                                   SizedBox(
                                     width: 8,
                                   ),
-                                  ElevatedButtonWithoutSizeCustom(
+                                  ElevatedButtonCustom(
                                     text: controller.listPasswordHints[3],
                                     colorBG: controller.listPasswordHintsSelect[3]
                                         ? ColorStyle.blueColor

@@ -17,7 +17,7 @@ class ButtonDemo extends StatelessWidget {
         padding: EdgeInsets.only(
           left: 16, right: 16, top: 16
         ),
-        child: ElevatedButtonWithoutSizeCustom(
+        child: ElevatedButtonCustom(
           text: "Let's get started",
           colorBG: ColorStyle.blueColor,
           colorText: ColorStyle.primaryWhite,

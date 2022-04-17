@@ -24,5 +24,13 @@ class ImageStyle {
   static const String sun= "$baseImage/sun.png";
   static const String updown= "$baseImage/updown.png";
   static const String user= "$baseImage/user.png";
+  static const String notificatioBlackBorder= "$baseImage/notificatioBlackBorder.png";
+  static const String UserBlackBorder= "$baseImage/UserBlackBorder.png";
+  static const String Handsss= "$baseImage/Handsss.png";
+  static const String Rectangle= "$baseImage/Rectangle.png";
+  static const String  BlackContainer= "$baseImage/ BlackContainer.png";
+  static const String  Ellipse= "$baseImage/ Ellipse.png";
+  static const String  SearchBar= "$baseImage/ SearchBar.png";
+
 
 }

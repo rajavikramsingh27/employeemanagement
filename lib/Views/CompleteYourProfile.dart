@@ -1,6 +1,6 @@
 import 'package:employeemanagement/Components/ButtonCustom.dart';
 import 'package:employeemanagement/Components/TextFieldCustom.dart';
-import 'package:employeemanagement/Controllers/ProfileController.dart';
+import 'package:employeemanagement/Controllers/CompleteYourProfileController.dart';
 import 'package:employeemanagement/Styles/ColorStyle.dart';
 import 'package:employeemanagement/Styles/SizeStyle.dart';
 import 'package:employeemanagement/Styles/TextStyles.dart';
@@ -78,7 +78,7 @@ class CompleteYourProfile extends StatelessWidget {
                           ),
                           Wrap(
                             children: [
-                              ElevatedButtonWithoutSizeCustom(
+                              ElevatedButtonCustom(
                                 text: controller.listPasswordHints[0],
                                 colorBG: controller.listPasswordHintsSelect[0]
                                     ? ColorStyle.blueColor
@@ -92,7 +92,7 @@ class CompleteYourProfile extends StatelessWidget {
                               SizedBox(
                                 width: 8,
                               ),
-                              ElevatedButtonWithoutSizeCustom(
+                              ElevatedButtonCustom(
                                 text: controller.listPasswordHints[1],
                                 colorBG: controller.listPasswordHintsSelect[1]
                                     ? ColorStyle.blueColor
@@ -106,7 +106,7 @@ class CompleteYourProfile extends StatelessWidget {
                               SizedBox(
                                 width: 8,
                               ),
-                              ElevatedButtonWithoutSizeCustom(
+                              ElevatedButtonCustom(
                                 text: controller.listPasswordHints[2],
                                 colorBG: controller.listPasswordHintsSelect[2]
                                     ? ColorStyle.blueColor
@@ -120,7 +120,7 @@ class CompleteYourProfile extends StatelessWidget {
                               SizedBox(
                                 width: 8,
                               ),
-                              ElevatedButtonWithoutSizeCustom(
+                              ElevatedButtonCustom(
                                 text: controller.listPasswordHints[3],
                                 colorBG: controller.listPasswordHintsSelect[3]
                                     ? ColorStyle.blueColor
