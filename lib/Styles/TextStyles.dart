@@ -32,7 +32,7 @@ class TextStyles {
   );
 
   static TextStyle get textStyles_16_w600 => TextStyle(
-    fontSize: SizeStyle.textSize_14,
+    fontSize: SizeStyle.textSize_16,
     fontFamily: kFontFamily,
     // fontWeight: FontWeight.w600,
   );

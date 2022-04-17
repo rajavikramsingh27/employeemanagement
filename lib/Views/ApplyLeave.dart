@@ -32,7 +32,7 @@ class ApplyLeave extends StatelessWidget {
         },
         builder: (authController) {
           return Obx(
-            () => SingleChildScrollView(
+                () => SingleChildScrollView(
               padding: EdgeInsets.only(left: 25, right: 20, top: 26),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -287,112 +287,112 @@ months() {
   return Get.dialog(Material(
       color: Colors.transparent,
       child: Obx(() => Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Container(
-                margin: EdgeInsets.only(left: 18, right: 18),
-                height: 580,
-                width: MediaQuery.of(Get.context!).size.width,
-                decoration: BoxDecoration(
-                  color: ColorStyle.primaryWhite,
-                  borderRadius: BorderRadius.circular(10),
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Container(
+            margin: EdgeInsets.only(left: 18, right: 18),
+            height: 580,
+            width: MediaQuery.of(Get.context!).size.width,
+            decoration: BoxDecoration(
+              color: ColorStyle.primaryWhite,
+              borderRadius: BorderRadius.circular(10),
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                SizedBox(
+                  height: 15,
                 ),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     SizedBox(
-                      height: 15,
+                      width: 15,
                     ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        SizedBox(
-                          width: 15,
-                        ),
-                        Text(
-                          'Select month',
-                          style: TextStyles.textStyles_20_bold,
-                        ),
-                        SizedBox(
-                          width: 142,
-                        ),
-                        InkWell(
-                          child: Container(
-                            margin: EdgeInsets.only(right: 20),
-                            width: 31,
-                            height: 31,
-                            child: Icon(
-                              Icons.clear,
-                              color: ColorStyle.secondryBlack,
-                              size: 20.0,
-                            ),
-                            decoration: BoxDecoration(
-                                // color: ColorStyle.bgColor,
-                                borderRadius: BorderRadius.circular(10),
-                                boxShadow: [
-                                  new BoxShadow(
-                                    color: Colors.black12..withOpacity(0.16),
-                                    blurRadius: 50.0,
-                                  ),
-                                ]),
-                          ),
-                          onTap: () {
-                            Get.back();
-                          },
-                        )
-                      ],
+                    Text(
+                      'Select month',
+                      style: TextStyles.textStyles_20_bold,
                     ),
-                    ListView.builder(
-                        padding: EdgeInsets.only(top: 20),
-                        shrinkWrap: true,
-                        itemCount: controller.listMonths.length,
-                        // itemCount: 11,
-                        physics: BouncingScrollPhysics(),
-                        itemBuilder: (BuildContext context, int index) {
-                          return Row(
-                            children: [
-                              InkWell(
-                                child: Container(
-                                  child: Icon(
-                                    controller.agree.value
-                                        ? Icons.check
-                                        : Icons.check,
-                                    color: (controller.yesandno.value == index)
-                                        ? ColorStyle.primaryWhite
-                                        : Colors.white,
-                                    size: 20.0,
-                                  ),
-                                  alignment: Alignment.center,
-                                  height: 32,
-                                  width: 32,
-                                  margin: EdgeInsets.only(
-                                      left: 16, right: 16, bottom: 10),
-                                  decoration: BoxDecoration(
-                                      color:
-                                          (controller.yesandno.value == index)
-                                              ? ColorStyle.blueColor
-                                              : Colors.white,
-                                      borderRadius: BorderRadius.circular(12),
-                                      border: Border.all(
-                                          width: 1,
-                                          color: ColorStyle.grayColor)),
-                                ),
-                                onTap: () {
-                                  controller.yesandno.value = index;
-                                },
+                    SizedBox(
+                      width: 142,
+                    ),
+                    InkWell(
+                      child: Container(
+                        margin: EdgeInsets.only(right: 20),
+                        width: 31,
+                        height: 31,
+                        child: Icon(
+                          Icons.clear,
+                          color: ColorStyle.secondryBlack,
+                          size: 20.0,
+                        ),
+                        decoration: BoxDecoration(
+                          // color: ColorStyle.bgColor,
+                            borderRadius: BorderRadius.circular(10),
+                            boxShadow: [
+                              new BoxShadow(
+                                color: Colors.black12..withOpacity(0.16),
+                                blurRadius: 50.0,
                               ),
-                              Text(
-                                // 'Logo',
-                                controller.listMonths[index],
-                                style: TextStyle(
-                                    color: Colors.black, fontSize: 15),
-                              ),
-                            ],
-                          );
-                        }),
+                            ]),
+                      ),
+                      onTap: () {
+                        Get.back();
+                      },
+                    )
                   ],
                 ),
-              ),
-            ],
-          ))));
+                ListView.builder(
+                    padding: EdgeInsets.only(top: 20),
+                    shrinkWrap: true,
+                    itemCount: controller.listMonths.length,
+                    // itemCount: 11,
+                    physics: BouncingScrollPhysics(),
+                    itemBuilder: (BuildContext context, int index) {
+                      return Row(
+                        children: [
+                          InkWell(
+                            child: Container(
+                              child: Icon(
+                                controller.agree.value
+                                    ? Icons.check
+                                    : Icons.check,
+                                color: (controller.yesandno.value == index)
+                                    ? ColorStyle.primaryWhite
+                                    : Colors.white,
+                                size: 20.0,
+                              ),
+                              alignment: Alignment.center,
+                              height: 32,
+                              width: 32,
+                              margin: EdgeInsets.only(
+                                  left: 16, right: 16, bottom: 10),
+                              decoration: BoxDecoration(
+                                  color:
+                                  (controller.yesandno.value == index)
+                                      ? ColorStyle.blueColor
+                                      : Colors.white,
+                                  borderRadius: BorderRadius.circular(12),
+                                  border: Border.all(
+                                      width: 1,
+                                      color: ColorStyle.grayColor)),
+                            ),
+                            onTap: () {
+                              controller.yesandno.value = index;
+                            },
+                          ),
+                          Text(
+                            // 'Logo',
+                            controller.listMonths[index],
+                            style: TextStyle(
+                                color: Colors.black, fontSize: 15),
+                          ),
+                        ],
+                      );
+                    }),
+              ],
+            ),
+          ),
+        ],
+      ))));
 }
