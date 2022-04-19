@@ -4,6 +4,10 @@ import 'package:get/get.dart';
 class ProfileController extends GetxController {
   Rx<TextEditingController> txtControllerPassword = TextEditingController().obs;
 
+
+
+  RxInt intAppBar = 0.obs;
+
   RxList<String> listProfileSelect = [
     'My all task ',
     'Attendance reports',
@@ -31,4 +35,8 @@ class ProfileController extends GetxController {
     'You have logged out of the app',
     '1.0.0',
   ].obs;
+
+  reset() {
+    intAppBar.value = 0;
+  }
 }
