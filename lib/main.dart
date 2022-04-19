@@ -31,7 +31,6 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       home: SplashScreen(),
-    //  updating to the GIT
     );
   }
 }
