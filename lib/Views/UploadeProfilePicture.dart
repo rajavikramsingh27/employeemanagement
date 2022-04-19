@@ -90,33 +90,35 @@ class UploadeProfilePicture extends StatelessWidget {
                           child: ClipRRect(
                             borderRadius:
                             BorderRadius.circular(16),
-                            child: Container(
-                              alignment: Alignment.center,
-                              height: 345,
-                              width: 345,
-                              decoration: BoxDecoration(
-                                  color: ColorStyle.primaryWhite,
-                                  borderRadius:
-                                  BorderRadius.circular(50),
-                                border: Border.all(
-                                  width: 1,
-                                  color: ColorStyle.grayColor,
+                            child: ClipRRect(
+                              child: Container(
+                                  alignment: Alignment.center,
+                                  height: 345,
+                                  width: 345,
+                                  decoration: BoxDecoration(
+                                      color: ColorStyle.primaryWhite,
+                                      borderRadius:
+                                      BorderRadius.circular(50),
+                                      border: Border.all(
+                                        width: 1,
+                                        color: ColorStyle.grayColor,
 
-                                )
-                              ),
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  controller.postPicture.value,
-                                  Text(
-                                    'Upload profile picture',
-                                    style: TextStyles.textStyles_12_normal.apply(
-                                      color: Colors.black12
-                                    ),
+                                      )
                                   ),
-                                ],
-                              )
-                            ),
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      controller.postPicture.value,
+                                      Text(
+                                        'Upload profile picture',
+                                        style: TextStyles.textStyles_12_normal.apply(
+                                            color: Colors.black12
+                                        ),
+                                      ),
+                                    ],
+                                  )
+                              ),
+                            )
                           ),
                           onTap: () {
                             _showPopupMenu();
